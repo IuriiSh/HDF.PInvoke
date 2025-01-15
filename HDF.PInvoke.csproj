@@ -27,13 +27,14 @@ This is an inofficial port of HDF.PInvoke to .NET Standard 2.0, based on
 the code published by the HDF Group at https://github.com/HDFGroup/HDF.PInvoke.
     </description>
     <PackageLicenseUrl>http://www.hdfgroup.org/ftp/HDF5/current/src/unpacked/COPYING</PackageLicenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<requireLicenseAcceptance>false</requireLicenseAcceptance>
     <PackageTags>HDF5 HDF Hierarchical Data Format</PackageTags>
-    <PackageProjectUrl>https://surban.github.io/HDF.PInvoke</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/IuriiSh/HDF.PInvoke</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/HDFGroup/HDF.PInvoke/master/images/hdf.png</PackageIconUrl>
     <PackageVersion>$(Version)$(Prerelease)</PackageVersion>
     <AssemblyVersion>$(Version)</AssemblyVersion>
-    <FileVersion>$(Version)</FileVersion>  
+    <FileVersion>$(Version)</FileVersion>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -68,18 +69,6 @@ the code published by the HDF Group at https://github.com/HDFGroup/HDF.PInvoke.
 
   <!-- Native libraries for .NET standard targets: -->  
   <ItemGroup>  
-    <Content Include="native/HDF5_1.10/bin32/hdf5.dll" PackagePath="runtimes/win-x86/native">
-      <Link>bin32/hdf5.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>  
-    <Content Include="native/HDF5_1.10/bin32/hdf5_hl.dll" PackagePath="runtimes/win-x86/native">
-      <Link>bin32/hdf5_hl.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>  
-    <Content Include="native/HDF5_1.10/bin32/zlib1.dll" PackagePath="runtimes/win-x86/native">
-      <Link>bin32/zlib1.dll</Link>    
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>        
     <Content Include="native/HDF5_1.10/bin64/hdf5.dll" PackagePath="runtimes/win-x64/native">
       <Link>bin64/hdf5.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -88,36 +77,7 @@ the code published by the HDF Group at https://github.com/HDFGroup/HDF.PInvoke.
       <Link>bin64/hdf5_hl.dll</Link>    
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>  
-    <Content Include="native/HDF5_1.10/bin64/zlib1.dll" PackagePath="runtimes/win-x64/native">
-      <Link>bin64/zlib1.dll</Link>    
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>           
 
-    <Content Include="native/HDF5_1.10/linux64/libhdf5.so" PackagePath="runtimes/linux-x64/native">
-      <Link>libhdf5.so</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>        
-    <Content Include="native/HDF5_1.10/linux64/libhdf5.so.103" PackagePath="runtimes/linux-x64/native">
-      <Link>libhdf5.so.103</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>        
-    <Content Include="native/HDF5_1.10/linux64/libhdf5_hl.so" PackagePath="runtimes/linux-x64/native">
-      <Link>libhdf5_hl.so</Link>      
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>           
-    <Content Include="native/HDF5_1.10/linux64/libhdf5_hl.so.100" PackagePath="runtimes/linux-x64/native">
-      <Link>libhdf5_hl.so.100</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>           
-
-    <Content Include="native/HDF5_1.10/mac/libhdf5.dylib" PackagePath="runtimes/osx-x64/native">
-      <Link>libhdf5.dylib</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>        
-    <Content Include="native/HDF5_1.10/mac/libhdf5_hl.dylib" PackagePath="runtimes/osx-x64/native">
-      <Link>libhdf5_hl.dylib</Link>      
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>           
   </ItemGroup>
 
 </Project>
